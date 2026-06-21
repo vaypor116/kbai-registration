@@ -1,0 +1,173 @@
+.pageWrapper {
+  min-height: 100vh;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background: var(--white);
+  border-bottom: 1px solid var(--grey-border);
+  padding: 0 2rem;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logoGroup {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logoBadge {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 16px;
+  color: white;
+  flex-shrink: 0;
+}
+
+.logoText strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--black);
+  letter-spacing: -0.01em;
+}
+
+.logoText span {
+  font-size: 11px;
+  color: var(--grey-mid);
+  font-weight: 400;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--grey-mid);
+}
+
+.headerDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #2ECC71;
+  display: inline-block;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem 5rem;
+  max-width: 760px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.titleBlock {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.titleBlock h1 {
+  font-size: clamp(1.8rem, 4.5vw, 2.4rem);
+  font-weight: 700;
+  color: var(--black);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 0.6rem;
+}
+
+.titleBlock h1 span {
+  color: var(--accent);
+}
+
+.titleBlock p {
+  font-size: 15px;
+  color: var(--grey-mid);
+  line-height: 1.6;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.choiceCard {
+  background: var(--white);
+  border: 1px solid var(--grey-border);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.75rem;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s;
+}
+
+.choiceCard:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.choiceIcon {
+  font-size: 32px;
+  margin-bottom: 0.5rem;
+}
+
+.choiceCard h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--black);
+  letter-spacing: -0.01em;
+}
+
+.choiceCard p {
+  font-size: 13px;
+  color: var(--grey-dark);
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.choiceCta {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-top: auto;
+}
+
+.footer {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 11px;
+  color: var(--grey-mid);
+  border-top: 1px solid var(--grey-border);
+  background: var(--white);
+}
+
+@media (max-width: 640px) {
+  .header { padding: 0 1rem; }
+  .main { padding: 2rem 1rem 4rem; }
+  .cardGrid { grid-template-columns: 1fr; }
+}

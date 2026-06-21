@@ -1,7 +1,7 @@
-import RegistrationForm from '@/components/RegistrationForm'
-import styles from './register.module.css'
+import Link from 'next/link'
+import styles from './landing.module.css'
 
-export default function RegisterPage() {
+export default function RegisterLandingPage() {
   return (
     <div className={styles.pageWrapper}>
       <header className={styles.header}>
@@ -19,13 +19,26 @@ export default function RegisterPage() {
       </header>
 
       <main className={styles.main}>
-        <div className={styles.programTitle}>
+        <div className={styles.titleBlock}>
           <h1>Kids Build with <span>AI</span> 2.0</h1>
-          <p>Complete the form below to secure your child's place in the program.</p>
-          <div className={styles.ageLine}>Ages 7 – 17 · STEM & AI Training</div>
+          <p>Choose how you'd like to be part of the program.</p>
         </div>
 
-        <RegistrationForm />
+        <div className={styles.cardGrid}>
+          <Link href="/register/student" className={styles.choiceCard}>
+            <div className={styles.choiceIcon}>🎓</div>
+            <h2>Register as a Student</h2>
+            <p>For children and teens ages 7–17 joining the AI training program.</p>
+            <span className={styles.choiceCta}>Start registration →</span>
+          </Link>
+
+          <Link href="/register/volunteer" className={styles.choiceCard}>
+            <div className={styles.choiceIcon}>🤝</div>
+            <h2>Register as a Volunteer</h2>
+            <p>For tutors, mentors and assistants who want to support the program.</p>
+            <span className={styles.choiceCta}>Start registration →</span>
+          </Link>
+        </div>
       </main>
 
       <footer className={styles.footer}>

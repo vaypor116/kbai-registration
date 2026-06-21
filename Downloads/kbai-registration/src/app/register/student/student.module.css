@@ -82,6 +82,20 @@
   width: 100%;
 }
 
+.backLink {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--grey-mid);
+  text-decoration: none;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  transition: color 0.15s;
+}
+
+.backLink:hover {
+  color: var(--accent);
+}
+
 /* ── Program title ── */
 .programTitle {
   text-align: center;
